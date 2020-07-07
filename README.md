@@ -9,10 +9,10 @@ sudo smbpasswd -a "username"
 The username must be an existing user on the machine.
 
 ## How it Works ##
-The way the script works is by taking user input and modifying an existing smb.conf file in this repository. Once it does that, it backs up the existing smb.conf to /etc/samba/smb.conf.bak, and moves the modified smb.conf file to /etc/samba.
+The way the script works is by taking user input and modifying an existing _smb.conf_ file in this repository. Once it does that, it backs up the existing _smb.conf_ to _/etc/samba/smb.conf.bak_, and moves the modified _smb.conf_ file to _/etc/samba_.
 
 ## To Use the Script ##
-After you've opened up a terminal, the first thing you're going to want to do is clone the repository to a convenient folder.
+After you've opened up a terminal, the first thing you're going to want to do is clone the repository to a convenient location.
 ```
 cd Desktop
 git clone https://github.com/ADawesomeguy/apple-samba
