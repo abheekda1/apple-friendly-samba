@@ -1,23 +1,23 @@
 #!/bin/bash
 sudo apt install samba -y
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-echo "What would you like to name your share?"
+echo -e "\e[7mWhat would you like to name your share?\e[27m"
 read sharename
 echo >> smb.conf
 echo [$sharename] >> smb.conf
-echo "Which directory should this share lead to? (Full path)"
+echo -e "\e[7mWhich directory should this share lead to? (Full path)\e[27m"
 read sharepath
 echo path = $sharepath >> smb.conf
 echo "read only = no" >> smb.conf
 echo "guest ok = no" >> smb.conf
 echo "browseable = yes" >> smb.conf
-echo "Which users should be allowed to access this share? (Separate with spaces)"
+echo -e "\e[7mWhich users should be allowed to access this share? (Separate with spaces)\e[27m"
 read validusers
 echo valid users = $validusers >> smb.conf
 echo "spotlight = yes" >> smb.conf
 echo "vfs objects = catia fruit streams_xattr" >> smb.conf
 echo "fruit:aapl = yes" >> smb.conf
 echo "fruit:time machine = yes" >> smb.conf
-echo "Congratulations! You now have a working Apple and Time Machine Samba share!"
+echo "\e[7mCongratulations! You now have a working Apple and Time Machine Samba share!\e[27m"
 sudo mv smb.conf /etc/samba/
 sudo service smbd restart
