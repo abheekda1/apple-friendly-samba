@@ -18,6 +18,6 @@ echo "spotlight = yes" >> smb.conf
 echo "vfs objects = catia fruit streams_xattr" >> smb.conf
 echo "fruit:aapl = yes" >> smb.conf
 echo "fruit:time machine = yes" >> smb.conf
-echo "\e[7mCongratulations! You now have a working Apple and Time Machine Samba share!\e[27m"
+echo -e "\e[7mCongratulations! You now have a working Apple and Time Machine Samba share!\e[27m"
 sudo mv smb.conf /etc/samba/
 sudo service smbd restart
