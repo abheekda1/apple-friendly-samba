@@ -36,6 +36,10 @@ chmod +x apple-samba-add
 
 ## Resetting samba ##
 To reset Samba to default, just run the _apple-samba-reset_ script, which will back up the existing smb.conf file and replace it with the default smb.conf file.
+```
+chmod +x apple-samba-reset
+./apple-samba-reset
+```
 Alternatively, you can run this command _**(NOT RECOMMENDED)**_:
 ```
 sudo apt purge samba
