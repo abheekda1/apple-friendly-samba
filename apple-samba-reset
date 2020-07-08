@@ -1,3 +1,4 @@
 #!/bin/bash
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
 sudo mv smb-default.conf /etc/samba/smb.conf
+echo -e "\e[7mSamba configuration has been reset\e[27m"
