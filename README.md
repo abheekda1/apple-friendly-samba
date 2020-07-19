@@ -1,5 +1,5 @@
 # Apple Samba
-This bash script will create a samba share for you that will be visible in Finder and for Time Machine.
+This bash script will create a samba share for you that will be visible in Finder and for Time Machine. Works on Ubuntu and Debian Linux.
 
 ## Preparation ##
 To use this, you must first create a samba user. This command will create a new samba user:
