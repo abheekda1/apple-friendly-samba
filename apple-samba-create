@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo apt install samba -y
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+cp smb-apple.conf smb.conf
 echo -e "\e[7mWhat would you like to name your share?\e[27m"
 read sharename
 echo >> smb.conf
@@ -17,7 +18,15 @@ echo valid users = $validusers >> smb.conf
 echo "spotlight = yes" >> smb.conf
 echo "vfs objects = catia fruit streams_xattr" >> smb.conf
 echo "fruit:aapl = yes" >> smb.conf
-echo "fruit:time machine = yes" >> smb.conf
-echo -e "\e[7mCongratulations! You now have a working Apple and Time Machine Samba share!\e[27m"
+echo -e "\e[7mWould you like the share to show up as a Time Machine drive? (y/n)\e[27m"
+read timemachine
+if [ timemachine = "y" ]
+then
+    echo "fruit:time machine = yes" >> smb.conf
+    echo "\e[7mTime Machine support will be added.\e[27m"
+else
+    echo "\e[7mTime Machine support WILL NOT be added.\e[27m"
+fi
+echo -e "\e[7mCongratulations! You now have a working Apple Samba share!\e[27m"
 sudo mv smb.conf /etc/samba/
 sudo service smbd restart
