@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt install samba -y
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
 cp smb-apple.conf smb.conf
 echo -e "\e[7mWhat would you like to name your share?\e[27m"
