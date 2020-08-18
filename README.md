@@ -14,7 +14,7 @@ The way the script works is by taking user input and modifying an existing _smb.
 ## To use the script ##
 After you've opened up a terminal, the first thing you're going to want to do is clone the repository to a convenient location.
 ```
-cd Desktop
+cd ~/
 git clone https://github.com/ADawesomeguy/apple-samba
 ```
 Once you've done that, go into the folder and run _apple-samba-create_.
