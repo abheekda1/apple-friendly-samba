@@ -1,8 +1,10 @@
 # Apple Friendly Samba
-This bash script will create a samba share for you that will be visible in Finder and for Time Machine. Works on Ubuntu and Debian Linux.
+This bash script will create a samba share for you that will be visible in Finder and for Time Machine.
 
 ## Preparation ##
-To use this, you must first create a samba user. This command will create a new samba user:
+The first thing to do is install samba and the avahi daemon. This will depend on you Linux distro. Once you have done that, start the Samba daemon and Avahi daemon services.
+
+Secondly, you must first create a samba user. This command will create a new samba user:
 ```
 sudo smbpasswd -a "username"
 ```
@@ -39,11 +41,6 @@ To reset Samba to default, just run the _apple-samba-reset_ script, which will b
 ```
 chmod +x apple-samba-reset
 ./apple-samba-reset
-```
-Alternatively, you can run this command _**(NOT RECOMMENDED)**_:
-```
-sudo apt purge samba
-sudo apt install samba
 ```
 
 ### Thanks for using this script! ###
