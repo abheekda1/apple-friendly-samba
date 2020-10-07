@@ -17,7 +17,7 @@ echo "vfs objects = catia fruit streams_xattr" >> /etc/samba/smb.conf
 echo "fruit:aapl = yes" >> /etc/samba/smb.conf
 echo -e "\e[7mWould you like the share to show up as a Time Machine drive? (y/n)\e[27m"
 read timemachine
-if [ timemachine == "y" ]
+if [ $timemachine == "y" ]
 then
     echo "fruit:time machine = yes" >> smb.conf
     echo "\e[7mTime Machine support will be added.\e[27m"
