@@ -22,7 +22,6 @@ git clone https://github.com/ADawesomeguy/apple-samba
 Once you've done that, go into the folder and run _apple-samba-create_.
 ```
 cd apple-samba
-chmod +x apple-samba-create
 ./apple-samba-create
 ```
 You will be prompted to enter your administrator password.
@@ -32,14 +31,12 @@ Once you've done that, answer a few prompts, and your share will be created!
 ## Adding new shares ##
 To add new shares, simply run the _apple-samba-add_ script, and answer a few prompts along the way.
 ```
-chmod +x apple-samba-add
 ./apple-samba-add
 ```
 
 ## Resetting samba ##
 To reset Samba to default, just run the _apple-samba-reset_ script, which will back up the existing smb.conf file and replace it with the default smb.conf file.
 ```
-chmod +x apple-samba-reset
 ./apple-samba-reset
 ```
 
