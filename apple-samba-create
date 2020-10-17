@@ -26,6 +26,14 @@ then
 else
     echo -e "\e[7mTime Machine support WILL NOT be added.\e[27m"
 fi
+PS3="What would you like your server to look like? "
+
+select model in "Xserve" "MacPro6,1" "MacPro7,1" "Macmini" "TimeCapsule"
+do
+	echo "Selected model: $model"
+	sed "s/Xserve/$model/g" smb-apple.conf
+	break
+done
 echo -e "\e[7mCongratulations! You now have a working Apple Samba share!\e[27m"
 sudo mv smb.conf /etc/samba/
-sudo service smbd restart
+sudo systemctl restart smbd
